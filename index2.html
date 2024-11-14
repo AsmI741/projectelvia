@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time EV Charging Station Locator</title>
+    <title>EV Charging Station Locator</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -13,11 +13,16 @@
             <h1 class="text-2xl font-bold text-center text-[#054d26] mb-6">Find Nearest EV Charging Station</h1>
             <form id="locationForm" class="space-y-4">
                 <div>
-                    <button id="currentLocationBtn" 
-                            type="button" 
-                            class="w-full bg-[#054d26] text-white py-2 px-4 rounded-md hover:bg-[#043d1e] transition duration-300">
-                        Use Current Location
-                    </button>
+                    <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                    <input type="text" id="city" name="city" 
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#054d26] focus:border-[#054d26]" 
+                           required placeholder="Enter your city">
+                </div>
+                <div>
+                    <label for="landmark" class="block text-sm font-medium text-gray-700">Nearby Landmark</label>
+                    <input type="text" id="landmark" name="landmark" 
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#054d26] focus:border-[#054d26]" 
+                           required placeholder="Enter a nearby landmark">
                 </div>
                 <div>
                     <button type="submit" 
@@ -36,4 +41,5 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
